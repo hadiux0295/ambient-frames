@@ -1,0 +1,14 @@
+{
+  "id": "fireplace",
+  "title": "Fireplace",
+  "palette": ["#160804", "#7a2e0a", "#ffb35c"],
+  "visual": { "kind": "embers", "speed": 0.35, "density": 0.5 },
+  "audio": {
+    "layers": [
+      { "name": "roar",    "synth": "brownnoise", "gain_db": -16, "effects": "lowpass 300 tremolo 0.3 30" },
+      { "name": "crackle", "synth": "whitenoise", "gain_db": -20, "effects": "highpass 2500 tremolo 9 95" },
+      { "name": "hiss",    "synth": "pinknoise",  "gain_db": -30, "effects": "bandpass 1200 800" }
+    ]
+  },
+  "tags": ["evening", "cozy"]
+}

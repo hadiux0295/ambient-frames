@@ -1,0 +1,14 @@
+{
+  "id": "dawn_aurora",
+  "title": "Dawn Aurora",
+  "palette": ["#06111f", "#1c4d5a", "#b6f0d0"],
+  "visual": { "kind": "aurora", "speed": 0.1, "density": 0.4 },
+  "audio": {
+    "layers": [
+      { "name": "pad_root",  "synth": "sine 110 sine 164.81", "gain_db": -24, "effects": "tremolo 0.03 40" },
+      { "name": "pad_fifth", "synth": "sine 220 sine 329.63", "gain_db": -30, "effects": "tremolo 0.05 50" },
+      { "name": "air",       "synth": "pinknoise", "gain_db": -32, "effects": "highpass 2000" }
+    ]
+  },
+  "tags": ["morning", "calm"]
+}

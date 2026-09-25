@@ -1,0 +1,14 @@
+{
+  "id": "deep_space",
+  "title": "Deep Space",
+  "palette": ["#02040a", "#0b1a3a", "#7fb2ff"],
+  "visual": { "kind": "starfield", "speed": 0.15, "density": 0.6 },
+  "audio": {
+    "layers": [
+      { "name": "rumble",   "synth": "brownnoise", "gain_db": -18 },
+      { "name": "drone",    "synth": "sine 50 sine 50.5", "gain_db": -26 },
+      { "name": "binaural", "synth": "sine 100 sine 104", "gain_db": -22, "note": "4 Hz theta beat, headphones only" }
+    ]
+  },
+  "tags": ["night", "focus"]
+}

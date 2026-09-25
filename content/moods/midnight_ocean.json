@@ -1,0 +1,14 @@
+{
+  "id": "midnight_ocean",
+  "title": "Midnight Ocean",
+  "palette": ["#020b14", "#0a2a3f", "#5fa8c9"],
+  "visual": { "kind": "waves", "speed": 0.2, "density": 0.5 },
+  "audio": {
+    "layers": [
+      { "name": "swell", "synth": "brownnoise", "gain_db": -16, "effects": "lowpass 800 tremolo 0.08 80" },
+      { "name": "foam",  "synth": "pinknoise",  "gain_db": -24, "effects": "highpass 1500 tremolo 0.09 90" },
+      { "name": "deep",  "synth": "sine 40 sine 40.3", "gain_db": -30 }
+    ]
+  },
+  "tags": ["night", "sleep"]
+}

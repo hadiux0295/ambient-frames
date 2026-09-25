@@ -1,0 +1,14 @@
+{
+  "id": "rain_window",
+  "title": "Rain on the Window",
+  "palette": ["#0f1419", "#22333b", "#9fb7c6"],
+  "visual": { "kind": "rain", "speed": 0.8, "density": 0.7 },
+  "audio": {
+    "layers": [
+      { "name": "rain",   "synth": "pinknoise", "gain_db": -14, "effects": "highpass 400 lowpass 6000" },
+      { "name": "rumble", "synth": "brownnoise", "gain_db": -24, "effects": "lowpass 150" },
+      { "name": "gusts",  "synth": "pinknoise", "gain_db": -22, "effects": "lowpass 900 tremolo 0.05 70" }
+    ]
+  },
+  "tags": ["day", "focus"]
+}
