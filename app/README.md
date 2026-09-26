@@ -40,7 +40,7 @@ Measured 2026-09-05 with the v1 assets (5 × 10 min 1080p, 160 MB): vpkg 155 MB,
 
 ## Known limits / next
 - `loop`: the 2.3.4 JS layer does implement `loop` (calls `play()` on `ended` and swallows the event) although the docs list it as unsupported — we keep our own `ended` handler so the engine still gets its tick.
-- No on-device screenshot/recording — demo capture is Windows-side on the VVD window.
+- No on-device screenshot/recording — but the VVD window is an XWayland window, so WSL captures it directly (measured 2026-09-26): boot with `vega virtual-device start --display-res 1920,1080 --timeout 300` (the 60 s default deadline fails), resize the window to 1600×900 at (0,0) with python-xlib (a 1080-tall window plus title bar overflows a 1080 screen and x11grab returns BadMatch), then `ffmpeg -nostdin -f x11grab -draw_mouse 0 -window_id <id> -i :0`. Grabbing the root (`-i :0+x,y`) returns black under WSLg; without `-nostdin` a backgrounded ffmpeg exits mid-take. Each mood file opens with a fade from black, so a mood switch shows ~7 s of black on the VVD. Demo take + edit scripts: PC `temp/ambient_frames/demo_take/{take.sh,compose.py}`.
 - Bundle size: 160 MB of assets for five 10-min moods (see the root README "Content budget"); the public repo git-ignores them — ship via GitHub Release or re-render with `render_all.sh`.
 
 ## Adaptive Auto (2026-09-19)
